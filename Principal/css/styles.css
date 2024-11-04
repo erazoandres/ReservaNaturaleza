@@ -1,23 +1,40 @@
 h1 {
     text-align: center;
     font-size: 36px;
+<<<<<<< HEAD
     color: rgb(161, 237, 91);
+=======
+    color: darkblue;
+>>>>>>> b13b82380fef58663d5e1a356e71f776a3198579
 }
 
 body {
     font-family: Arial, sans-serif;
     margin: 10;
     padding: 0;
+<<<<<<< HEAD
     background-color: rgb(149, 132, 112);
+=======
+    background-color: bisque;
+
+>>>>>>> b13b82380fef58663d5e1a356e71f776a3198579
 }
 
 nav {
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
     background-color: rgb(161, 237, 91);
 }
 
 nav ul {
+=======
+    background-color: rgb(202, 169, 35);
+
+}
+
+nav ul { 
+>>>>>>> b13b82380fef58663d5e1a356e71f776a3198579
     list-style-type: none;
     padding-left: 20px;
     display: flex;
@@ -27,6 +44,7 @@ nav ul {
 nav ul li {
     margin-bottom: 5px;
     font-size: 20px;
+<<<<<<< HEAD
 }
 
 nav ul li a {
@@ -46,19 +64,43 @@ img {
     width: 325px;
     height: 300px;
     object-fit: contain; /* Cambiado a contain para evitar recortes */
+=======
+    
+}
+nav ul li a {
+    text-decoration: none;
+}
+.contenedor-imagenes{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    margin: top 50px;
+    justify-content: center;
+}
+
+img {
+    width:325px;
+    height: 300px;
+    object-fit: over;
+>>>>>>> b13b82380fef58663d5e1a356e71f776a3198579
     border-radius: 10px;
 }
 
 .contenedor {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     gap: 20px;
+=======
+    gap: 20px; 
+>>>>>>> b13b82380fef58663d5e1a356e71f776a3198579
 }
 
 .fila {
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
     gap: 20px;
 }
 
@@ -76,19 +118,47 @@ img {
     font-size: 20px;
     text-align: justify;
 }
+=======
+    gap: 20px; 
+}
+
+.fila img {
+    width: 45%; 
+    height: auto; 
+}
+
+.fila p {
+    width: 50%; 
+    text-align: justify; 
+}
+.primer_parrafo {
+    font-size: 20px; 
+    text-align: justify; 
+}
+
+
+
+>>>>>>> b13b82380fef58663d5e1a356e71f776a3198579
 
 .parrafo_dos {
     font-family: Arial, sans-serif;
     text-align: center;
     font-size: 36px;
+<<<<<<< HEAD
     color: rgb(250, 152, 5);
 }
 
 .parrafo_tres {
+=======
+    color: rgb(64, 83, 13);
+}
+.parrafo_tres{
+>>>>>>> b13b82380fef58663d5e1a356e71f776a3198579
     font-family: Arial, sans-serif;
     text-align: center;
     font-size: 36px;
     color: rgb(227, 148, 21);
+<<<<<<< HEAD
 }
 
 .piedepagina {
@@ -138,3 +208,7 @@ img {
     object-fit: contain; /* Esto asegura que las imágenes se ajusten bien */
 }
 
+=======
+
+}
+>>>>>>> b13b82380fef58663d5e1a356e71f776a3198579
