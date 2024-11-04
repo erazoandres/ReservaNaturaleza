@@ -3,8 +3,6 @@ body {
     font-size: medium;
     margin: 0;
     padding: 0;
-    background-image: url("https://i.pinimg.com/originals/45/d9/c2/45d9c20aba114295c49ff9fe6dbfb8e1.png");
-    background-repeat: no-repeat;
     height: 100vh;
 }
 
@@ -16,70 +14,74 @@ h3 {
 
 #contenedor_titulo {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 100px;
-    color: darkolivegreen;
+    font-size: 50px;
+    color: rgb(141, 7, 108);
     display: flex;
     justify-content: center;
-    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5) ;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+    background-color: rgb(84, 185, 146);
+}
+
+#contenedor_titulo img {
+    display: flex;
+    padding: 5px;
 }
 
 #contenedor_servicios {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
-    color: darkgreen;
-    justify-content:space-around;
-    margin: 5px;
-    padding: 10px;
+    color: rgb(141, 7, 108);
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0px;
     display: flex;
     flex-wrap: wrap;
+    background-color:rgb(84, 185, 146);
 }
 
-#contenedor_tarjetas{
+#contenedor_tarjetas {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    background-color:rgb(185, 84, 185);
 }
 
 #contenedor_tarjetas div {
-  background-color: rgb(191, 252, 171);
-  margin: 20px;
-  padding: 5px;
-  border-radius: 5px;
-  transition: .4s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
-  height:auto;
-  width: 400px;
+    background-color: rgb(84, 185, 146);
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: .4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra */
+    height: auto;
+    width: 400px;
 }
 
 #contenedor_tarjetas div:hover {
-transform: translateY(-10px);
+    transform: translateY(-10px);
 }
 
 #contenedor_tarjetas label {
     display: block;
     padding-left: 20px;
-    font-family:Arial, Helvetica, sans-serif;
-    color: darkgreen;
-    font-size:20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
 }
 
-#contenedor_tarjetas div  img {
+#contenedor_tarjetas div img {
     width: 100%;
     border-radius: 5px;
     height: 300px;
-    object-fit:cover;
+    object-fit: cover;
 }
 
 #contenedor_tarjetas div p {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: rgb(5, 5, 5);
     text-align: justify;
     padding: 20px;
-   margin-bottom: 5px;
+    margin-bottom: 5px;
+    font-size: 20px;
 }
 
-.imagen_body{
-    position: fixed;   
-    z-index: -1000; 
-    right: 10px;
-    bottom:10px; 
-}
