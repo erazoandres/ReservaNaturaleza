@@ -1,6 +1,6 @@
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: medium;
+    /* font-size: medium; */
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -8,13 +8,13 @@ body {
 
 h3 {
     text-align: center;
-    font-size: x-large;
+    /* font-size: x-large; */
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #contenedor_titulo {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
+    /* font-size: 50px; */
     color: rgb(141, 7, 108);
     display: flex;
     justify-content: center;
@@ -29,7 +29,7 @@ h3 {
 
 #contenedor_servicios {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    /* font-size: 30px; */
     color: rgb(141, 7, 108);
     justify-content: space-around;
     margin: 0px;
@@ -53,8 +53,11 @@ h3 {
     transition: .4s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     /* Sombra */
-    height: auto;
-    width: 400px;
+    height: 400px;
+    overflow: hidden;
+
+    /* Nata, esta linea es mejor eliminarla asi no interfiere con la distribucion del espacio que cumple el grid  */
+    /* width: 400px; */ 
 }
 
 #contenedor_tarjetas div:hover {
@@ -66,13 +69,14 @@ h3 {
     padding-left: 20px;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(0, 0, 0);
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
 #contenedor_tarjetas div img {
     width: 100%;
-    border-radius: 5px;
-    height: 300px;
+    /* border-radius: 5px; */
+    border-radius: 2px;
+    /* height: 300px; */
     object-fit: cover;
 }
 
@@ -80,8 +84,30 @@ h3 {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(5, 5, 5);
     text-align: justify;
-    padding: 20px;
-    margin-bottom: 5px;
-    font-size: 20px;
+    /* padding: 20px; */
+    padding: 8px;
+    /* margin-bottom: 5px; */
+    /* font-size: 20px; */
+}
+
+/* ESTILO DE BOTONES CATEGORIA */
+button{
+    padding: 10px;
+    color:white;
+    background-color: blueviolet;
+}
+
+
+
+/* RECOMENDACION EFECTO SOBRE TITULO */
+#contenedor_tarjetas div:hover h3{
+    color:white;
+    transition: .2s all;
+}
+
+
+/* RECOMENDACION CURSOR SOBRE TARGETA */
+#contenedor_tarjetas div:hover{
+    cursor:pointer;
 }
 

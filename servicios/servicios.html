@@ -6,29 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/servicios.css">
+    <script src = "js/filtrar.js"></script>
 </head>
 
 <body>
+
+
     <!--Esta linea contiene el titulo -->
-    <div id="contenedor_titulo">
+    <div id="contenedor_titulo" >
         <h1>Experiencias que dejan huella verde</h1>
         <img src="images/Captura-removebg-preview.png" alt="">
     </div>
     <!--Esta linea contiene el contenedor de servicios -->
-    <div id="contenedor_servicios">
-        <div>
-            <h2>Recorrido</h2>
-        </div>
-        <div>
-            <h2>Pasadias</h2>
-        </div>
-        <div>
-            <h2>Eventos</h2>
-        </div>
+    <div id="contenedor_servicios" >
+        <button class="info-button" onclick="filterCard('recorrido')">
+            Recorrido
+        </button>
+        
+        <button class="info-button" onclick="filterCard('pasadia')">
+            Pasadias
+        </button>
+
+        <button class="info-button" onclick="filterCard('eventos')"> 
+            Eventos
+        </button>
     </div>
+
+    <!-- RECOMENDACION: AGREGAR CLASE Y CATEGORY CON SU CONTENIDO -->
     <!--Esta linea contiene el contenedor de tarjetas -->
     <div id="contenedor_tarjetas">
-        <div>
+        <div class="card" category = "pasadia">
             <img src="images/2MUSGO.jpg" alt="Estatuilla de mujer con musgo">
             <h3>Bichacue Yath Arte y Naturaleza</h3>
             <p>Es un lugar donde el musgo es el elemento
@@ -45,7 +52,7 @@
             <label for="">Edad ingreso</label>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div>
+        <div class="card" category = "pasadia">
             <img src="images/chorrera.JPG" alt="Casa montaña">
             <h3>La chorrera del indio</h3>
             <p>Disfruta de un paraiso terrenal, lleno de magia y tranquilidad
@@ -59,7 +66,7 @@
             <label for="">Edad ingreso</label>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div>
+        <div class="card" category = "eventos">
             <img src="images/colibrí.jpg" alt="Colibrí posado en una rama">
             <h3>Bosque Colibrí</h3>
             <p>"Somos una Reserva Natural, cuidamos y conservamos una
@@ -74,7 +81,7 @@
             <label for="">Edad ingreso</label>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div>
+        <div class="card" category = "recorrido">
             <img src="images/garzas.jpg" alt="Garza blanca volando">
             <h3>Ecoparque Lago de las garzas</h3>
             <p>"Parque frondoso que tiene un lago sencillo con tortugas,
@@ -85,7 +92,7 @@
             <label for="">Edad ingreso</label>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div>
+        <div class="card" category = "recorrido">
             <img src="images/pato torrentero.jpg" alt="Pato torrento nadando">
             <h3>Reserva Natural Anahuac</h3>
             <p>Somos una reserva natural privada fundada en 1990 ubicada en la vereda
@@ -100,7 +107,7 @@
             <label for="">Edad ingreso</label>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div>
+        <div class="card" category = "recorrido">
             <img src="images/andoke.jpg" alt="Invernadero de mariposas">
             <h3>Andoke</h3>
             <p>Somos un mariposario, con más de 15 especies de mariposas,
@@ -114,7 +121,7 @@
             <label for="">Edad ingreso</label>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div>
+        <div class="card" category = "eventos">
             <img src="images/zoológico.jpg" alt="Flamingos en lago">
             <h3>Zoológico de Cali</h3>
             <p>Somos un escenario de encuentro ciudadano dedicado a la conservación
@@ -127,7 +134,7 @@
             <label for="">Edad ingreso</label>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div>
+        <div class="card" category = "eventos">
             <img src="images/jardin botanico.jpg" alt="Lago de flores, vista completa del lugar">
             <h3>Jardín botánico de Cali</h3>
             <p>El Jardín Botánico de Cali más que un lugar para conocer de plantas es
@@ -139,7 +146,7 @@
             <label for="">Edad ingreso</label>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div>
+        <div class="card" category = "eventos">
             <img src="images/pico loro.jpg" alt="Montaña pico de loro">
             <h3>Parque farallones sendero pico loro</h3>
             <p>El Sendero más Famoso dentro de los Farallones de Cali espera por ti
@@ -153,7 +160,7 @@
             <label for="">Edad ingreso</label>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div>
+        <div class="card" category = "eventos">
             <img src="images/7charcos2.jpg" alt="Rio cristalino siete charcos">
             <h3>Cañón del Anchicaya (7 Charcos)</h3>
             <p>Una espectacular ruta cruzando el río Dagua donde encontraremos
