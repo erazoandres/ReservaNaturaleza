@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', function() {
+  // Asignar el evento de 'submit' al formulario
+  document.getElementById('miFormulario').addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevenir el envío del formulario por defecto
+    obtenerDatos();  // Llamar a tu función de envío personalizada
+  });
+});
+
 function obtenerDatos() {
   // Recoger los valores del formulario
   let nombre = document.getElementById("nombre").value;
@@ -20,7 +28,6 @@ function obtenerDatos() {
   // Convertir el objeto a una cadena JSON
   let datosJSON = JSON.stringify(datos);
 
-  // Enviar los datos al backend usando fetch
   fetch('http://localhost:3000/guardar', {
     method: 'POST', // Usamos el método POST
     headers: {
@@ -29,14 +36,26 @@ function obtenerDatos() {
     body: datosJSON // Enviamos el objeto JSON
   })
   .then(response => {
-    if (response.ok) {
-      return response.json(); // Si la respuesta es exitosa, la convertimos a JSON
+    if (!response.ok) {
+      throw new Error('Error al guardar los datos');
     }
-    throw new Error('Error al guardar los datos');
+  
+    // Verificar si la respuesta es JSON antes de intentar parsearla
+    const contentType = response.headers.get('Content-Type');
+    if (contentType && contentType.includes('application/json')) {
+      return response.json(); // Convertir la respuesta a JSON si es el tipo esperado
+    } else {
+      return response.text(); // Si no es JSON, tratamos la respuesta como texto
+    }
   })
   .then(data => {
-    alert('Datos guardados correctamente');
-    console.log(data); // Puedes mostrar el mensaje o datos que el servidor devuelva
+    if (typeof data === 'string') {
+      console.log(data); // Si la respuesta es texto plano
+      alert('Datos guardados correctamente');
+    } else {
+      console.log(data); // Si la respuesta es un objeto JSON
+      alert('Datos guardados correctamente');
+    }
   })
   .catch(error => {
     console.error('Error al enviar los datos:', error);
