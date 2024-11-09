@@ -1,113 +1,154 @@
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* font-size: medium; */
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     margin: 0;
     padding: 0;
     height: 100vh;
 }
 
-h3 {
-    text-align: center;
-    /* font-size: x-large; */
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#contenedor_titulo {
-    font-family: Arial, Helvetica, sans-serif;
-    /* font-size: 50px; */
-    color: rgb(141, 7, 108);
+nav {
     display: flex;
     justify-content: center;
-    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
-    background-color: rgb(84, 185, 146);
+    background-color: rgb(83, 75, 66);
 }
 
-#contenedor_titulo img {
+nav ul {
+    list-style-type: none;
+    padding-left: 20px;
     display: flex;
-    padding: 5px;
+    gap: 80px;
 }
 
-#contenedor_servicios {
+nav ul li {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+    font-size: x-large;
     font-family: Arial, Helvetica, sans-serif;
-    /* font-size: 30px; */
-    color: rgb(141, 7, 108);
+}
+
+.contenedor_titulo {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 40px;
+    color: rgb(227, 148, 21);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+    background-color: rgb(149, 132, 112);
+}
+
+.contenedor_titulo div:hover h1 {
+    transition: transform 0.3s ease;
+    transform: rotate(10deg);
+}
+
+.contenedor_titulo img {
+    display: flex;
+    height: auto;
+}
+
+.contenedor_servicios {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+    font-style: normal;
+    color: rgb(227, 148, 21);
     justify-content: space-around;
     margin: 0px;
     padding: 0px;
     display: flex;
     flex-wrap: wrap;
-    background-color:rgb(84, 185, 146);
+    background-color: rgb(149, 132, 112);
 }
 
-#contenedor_tarjetas {
+
+.card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background-color:rgb(185, 84, 185);
+    background-color: rgb(149, 132, 112);
 }
 
-#contenedor_tarjetas div {
-    background-color: rgb(84, 185, 146);
+.card-container ul {
+    flex-direction: column;
+    padding: 10px;
+    list-style-type: none;
+    /* Elimina las viñetas de la lista */
+    padding: 0;
+}
+
+i {
+    margin-right: 10px;
+    /* Espacio entre el icono y el texto */
+    display: flex;
+}
+
+.card-container div {
+    background-color: rgba(243, 233, 221, 0.774);
     margin: 20px;
     padding: 10px;
     border-radius: 5px;
     transition: .4s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     /* Sombra */
-    height: 400px;
+    height: auto;
     overflow: hidden;
-
-    /* Nata, esta linea es mejor eliminarla asi no interfiere con la distribucion del espacio que cumple el grid  */
-    /* width: 400px; */ 
 }
 
-#contenedor_tarjetas div:hover {
-    transform: translateY(-10px);
-}
-
-#contenedor_tarjetas label {
-    display: block;
-    padding-left: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(0, 0, 0);
-    /* font-size: 20px; */
-}
-
-#contenedor_tarjetas div img {
-    width: 100%;
-    /* border-radius: 5px; */
-    border-radius: 2px;
-    /* height: 300px; */
-    object-fit: cover;
-}
-
-#contenedor_tarjetas div p {
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(5, 5, 5);
-    text-align: justify;
-    /* padding: 20px; */
-    padding: 8px;
-    /* margin-bottom: 5px; */
-    /* font-size: 20px; */
-}
-
-/* ESTILO DE BOTONES CATEGORIA */
-button{
-    padding: 10px;
-    color:white;
-    background-color: blueviolet;
-}
-
-
-
-/* RECOMENDACION EFECTO SOBRE TITULO */
-#contenedor_tarjetas div:hover h3{
-    color:white;
+.card-container div:hover h3 {
+    color: rgb(149, 132, 112);
     transition: .2s all;
 }
 
-
-/* RECOMENDACION CURSOR SOBRE TARGETA */
-#contenedor_tarjetas div:hover{
-    cursor:pointer;
+.card-container div:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
 }
 
+.card-container label {
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: normal;
+    display: block;
+    padding-left: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.card-container div img {
+    width: 100%;
+    border-radius: 2px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-container div p {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    padding: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+button {
+    padding: 10px;
+    color: white;
+    background-color: rgb(53, 53, 53);
+}

@@ -6,36 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/servicios.css">
-    <script src = "js/filtrar.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/filtrado.js"></script>
+    <!--Aqui estan las fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
-
-
+    <!--Esta linea contiene navbar -->
+    <nav>
+        <ul>
+            <li><a href="../index.html"">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+        </ul>
+    </nav>
     <!--Esta linea contiene el titulo -->
-    <div id="contenedor_titulo" >
+    <div class="contenedor_titulo">
         <h1>Experiencias que dejan huella verde</h1>
-        <img src="images/Captura-removebg-preview.png" alt="">
     </div>
     <!--Esta linea contiene el contenedor de servicios -->
-    <div id="contenedor_servicios" >
-        <button class="info-button" onclick="filterCard('recorrido')">
-            Recorrido
-        </button>
-        
-        <button class="info-button" onclick="filterCard('pasadia')">
-            Pasadias
-        </button>
-
-        <button class="info-button" onclick="filterCard('eventos')"> 
-            Eventos
-        </button>
+    <div class="contenedor_servicios">
+        <button class="info-button" onclick="filterCard('Pasadias')">Pasadias</button>
+        <button class="info-button" onclick="filterCard('Recorrido')">Recorrido</button>
+        <button class="info-button" onclick="filterCard('Eventos')">Eventos</button>
     </div>
-
-    <!-- RECOMENDACION: AGREGAR CLASE Y CATEGORY CON SU CONTENIDO -->
     <!--Esta linea contiene el contenedor de tarjetas -->
-    <div id="contenedor_tarjetas">
-        <div class="card" category = "pasadia">
+    <div class="card-container">
+        <div class="card" data-category="Recorrido">
             <img src="images/2MUSGO.jpg" alt="Estatuilla de mujer con musgo">
             <h3>Bichacue Yath Arte y Naturaleza</h3>
             <p>Es un lugar donde el musgo es el elemento
@@ -47,12 +51,14 @@
                 la naturaleza, permitiendo volar la imaginación y despertar
                 es un niño interior.
             </p>
-            <label for="">Precio</label>
-            <label for="">Horario</label>
-            <label for="">Edad ingreso</label>
+             <ul>
+                <div style="display: flex;"><i class="fa-solid fa-clock" style="color: #000000;"></i><li>Horario</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-money-check-dollar" style="color: #000000;"></i><li>Precio</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-user" style="color: #000000;"></i><li>Personas</li></div>
+            </ul>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div class="card" category = "pasadia">
+        <div class="card" data-category="Pasadias">
             <img src="images/chorrera.JPG" alt="Casa montaña">
             <h3>La chorrera del indio</h3>
             <p>Disfruta de un paraiso terrenal, lleno de magia y tranquilidad
@@ -61,12 +67,14 @@
                 y alegria, comparte los mejores momentos con tu familia del lado
                 de la naturaleza.
             </p>
-            <label for="">Precio</label>
-            <label for="">Horario</label>
-            <label for="">Edad ingreso</label>
+            <ul>
+                <div style="display: flex;"><i class="fa-solid fa-clock" style="color: #000000;"></i><li>Horario</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-money-check-dollar" style="color: #000000;"></i><li>Precio</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-user" style="color: #000000;"></i><li>Personas</li></div>
+            </ul>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div class="card" category = "eventos">
+        <div class="card" data-category="Pasadias">
             <img src="images/colibrí.jpg" alt="Colibrí posado en una rama">
             <h3>Bosque Colibrí</h3>
             <p>"Somos una Reserva Natural, cuidamos y conservamos una
@@ -76,23 +84,27 @@
                 experiencia con seguridad y respeto por la naturaleza.
                 Agenda tu visita con anterioridad."
             </p>
-            <label for="">Precio</label>
-            <label for="">Horario</label>
-            <label for="">Edad ingreso</label>
+            <ul>
+                <div style="display: flex;"><i class="fa-solid fa-clock" style="color: #000000;"></i><li>Horario</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-money-check-dollar" style="color: #000000;"></i><li>Precio</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-user" style="color: #000000;"></i><li>Personas</li></div>
+            </ul>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div class="card" category = "recorrido">
+        <div class="card" data-category="Eventos">
             <img src="images/garzas.jpg" alt="Garza blanca volando">
             <h3>Ecoparque Lago de las garzas</h3>
             <p>"Parque frondoso que tiene un lago sencillo con tortugas,
                 peces, patos y aves, y un área de pícnic."
             </p>
-            <label for="">Precio</label>
-            <label for="">Horario</label>
-            <label for="">Edad ingreso</label>
+            <ul>
+                <div style="display: flex;"><i class="fa-solid fa-clock" style="color: #000000;"></i><li>Horario</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-money-check-dollar" style="color: #000000;"></i><li>Precio</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-user" style="color: #000000;"></i><li>Personas</li></div>
+            </ul>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div class="card" category = "recorrido">
+        <div class="card" data-category="Pasadias">
             <img src="images/pato torrentero.jpg" alt="Pato torrento nadando">
             <h3>Reserva Natural Anahuac</h3>
             <p>Somos una reserva natural privada fundada en 1990 ubicada en la vereda
@@ -102,12 +114,14 @@
                 del río Pance, contamos con afluente propio en una de las zonas más altas
                 del corregimiento.
             </p>
-            <label for="">Precio</label>
-            <label for="">Horario</label>
-            <label for="">Edad ingreso</label>
+            <ul>
+                <div style="display: flex;"><i class="fa-solid fa-clock" style="color: #000000;"></i><li>Horario</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-money-check-dollar" style="color: #000000;"></i><li>Precio</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-user" style="color: #000000;"></i><li>Personas</li></div>
+            </ul>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div class="card" category = "recorrido">
+        <div class="card" data-category="Recorrido">
             <img src="images/andoke.jpg" alt="Invernadero de mariposas">
             <h3>Andoke</h3>
             <p>Somos un mariposario, con más de 15 especies de mariposas,
@@ -116,12 +130,14 @@
                 construido entre piedras y rocas ancestrales, árboles y bellos jardines acuáticos.
                 A demás también encontrarás artesanías elaboradas con alas de mariposas.
             </p>
-            <label for="">Precio</label>
-            <label for="">Horario</label>
-            <label for="">Edad ingreso</label>
+            <ul>
+                <div style="display: flex;"><i class="fa-solid fa-clock" style="color: #000000;"></i><li>Horario</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-money-check-dollar" style="color: #000000;"></i><li>Precio</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-user" style="color: #000000;"></i><li>Personas</li></div>
+            </ul>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div class="card" category = "eventos">
+        <div class="card" data-category="Recorrido">
             <img src="images/zoológico.jpg" alt="Flamingos en lago">
             <h3>Zoológico de Cali</h3>
             <p>Somos un escenario de encuentro ciudadano dedicado a la conservación
@@ -129,24 +145,28 @@
                 trabajamos día a día para inspirar el amor por la naturaleza y el cuidado de la vida.
                 ¡Ven y se parte de nuestra historia!
             </p>
-            <label for="">Precio</label>
-            <label for="">Horario</label>
-            <label for="">Edad ingreso</label>
+            <ul>
+                <div style="display: flex;"><i class="fa-solid fa-clock" style="color: #000000;"></i><li>Horario</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-money-check-dollar" style="color: #000000;"></i><li>Precio</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-user" style="color: #000000;"></i><li>Personas</li></div>
+            </ul>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div class="card" category = "eventos">
+        <div class="card" data-category="Recorrido">
             <img src="images/jardin botanico.jpg" alt="Lago de flores, vista completa del lugar">
             <h3>Jardín botánico de Cali</h3>
             <p>El Jardín Botánico de Cali más que un lugar para conocer de plantas es
                 un lugar que nos permite conectarnos con la naturaleza, aprender del mundo
                 vegetal y promover valores relacionados con el buen vivir.
             </p>
-            <label for="">Precio</label>
-            <label for="">Horario</label>
-            <label for="">Edad ingreso</label>
+            <ul>
+                <div style="display: flex;"><i class="fa-solid fa-clock" style="color: #000000;"></i><li>Horario</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-money-check-dollar" style="color: #000000;"></i><li>Precio</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-user" style="color: #000000;"></i><li>Personas</li></div>
+            </ul>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div class="card" category = "eventos">
+        <div class="card" data-category="Recorrido">
             <img src="images/pico loro.jpg" alt="Montaña pico de loro">
             <h3>Parque farallones sendero pico loro</h3>
             <p>El Sendero más Famoso dentro de los Farallones de Cali espera por ti
@@ -155,21 +175,25 @@
                 nos deleitaremos con la hermosa vista panorámica hacia los Farallones de Cali junto con
                 increíbles paisajes de sus alrededores, donde podrás sacar unas fotos increíbles.
             </p>
-            <label for="">Precio</label>
-            <label for="">Horario</label>
-            <label for="">Edad ingreso</label>
+            <ul>
+                <div style="display: flex;"><i class="fa-solid fa-clock" style="color: #000000;"></i><li>Horario</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-money-check-dollar" style="color: #000000;"></i><li>Precio</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-user" style="color: #000000;"></i><li>Personas</li></div>
+            </ul>
         </div>
         <!--Esta linea contiene tarjeta-->
-        <div class="card" category = "eventos">
+        <div div class="card" data-category="Recorrido">
             <img src="images/7charcos2.jpg" alt="Rio cristalino siete charcos">
             <h3>Cañón del Anchicaya (7 Charcos)</h3>
             <p>Una espectacular ruta cruzando el río Dagua donde encontraremos
                 7 charcos de agua cristalina perfectos para nadar y clavar, avistamiento de aves;
                 esta es una zona privilegiada,hay diferentes programas y actividades que puede hacer.
             </p>
-            <label for="">Precio</label>
-            <label for="">Horario</label>
-            <label for="">Edad ingreso</label>
+            <ul>
+                <div style="display: flex;"><i class="fa-solid fa-clock" style="color: #000000;"></i><li>Horario</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-money-check-dollar" style="color: #000000;"></i><li>Precio</li></div>
+                <div style="display: flex;"><i class="fa-solid fa-user" style="color: #000000;"></i><li>Personas</li></div>
+            </ul>
         </div>
 
     </div>
