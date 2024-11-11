@@ -100,6 +100,7 @@ img {
 .carrusel {
     position: relative; /* Posición relativa para el posicionamiento absoluto de los controles */
     width: 100%; /* Ajusta el ancho según sea necesario */
+    height: 80vh;
     overflow: hidden; /* Oculta las imágenes que no están en vista */
 }
 

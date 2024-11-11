@@ -8,7 +8,7 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors());  // Esto habilita CORS para todas las rutas
-
+app.use(express.static('public'));
 // Configurar body-parser para recibir JSON
 app.use(bodyParser.json());
 
