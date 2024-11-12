@@ -10,20 +10,28 @@ function obtenerDatos() {
   // Recoger los valores del formulario
   let nombre = document.getElementById("nombre").value;
   let correo = document.getElementById("email").value;
-  let telefono = document.getElementById("telefono").value;
+  let telefono = parseInt(document.getElementById("telefono").value);
   let ciudad = document.getElementById("ciudad").value;
   let direccion = document.getElementById("direccion").value;
   let comentarios = document.getElementById("comentarios").value.trim();
   
+    // Validar los tipos de datos
+  if (isNaN(telefono)) {
+      alert("El número de teléfono debe ser un valor numérico.");
+      return;
+  }
+
   // Crear el objeto JSON con JS.
   let datos = {
-      nombre: nombre,
-      correo: correo,
-      telefono: telefono,
-      ciudad: ciudad,
-      direccion: direccion,
-      comentarios: comentarios
-  };
+    nombre: String(nombre),
+    correo: String(correo),
+    telefono: telefono,
+    ciudad: String(ciudad),
+    direccion: String(direccion),
+    comentarios: String(comentarios)
+};
+
+
 
   // Convertir el objeto a una cadena JSON
   let datosJSON = JSON.stringify(datos);

@@ -12,6 +12,7 @@ app.use(express.static('public'));
 // Configurar body-parser para recibir JSON
 app.use(bodyParser.json());
 
+
 // Conectar con MongoDB (usando la URI de conexión)
 mongoose.connect('mongodb://localhost:27017/miBaseDeDatos', {
   useNewUrlParser: true,
@@ -24,7 +25,6 @@ mongoose.connect('mongodb://localhost:27017/miBaseDeDatos', {
 const datosSchema = new mongoose.Schema({
     nombre: String,
     correo: String,
-    equipo: String,
     telefono: Number,
     ciudad: String,
     direccion: String,
