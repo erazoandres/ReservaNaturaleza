@@ -53,6 +53,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para redirigir al formulario de reserva
     reserveBtn.onclick = function() {
         // Redirige a la página de reservas (Formulario/index.html)
-        window.location.href = "/public/Formulario/index.html"; 
-    };
+        window.location.href = "../Formulario/index.html"    };
 });
