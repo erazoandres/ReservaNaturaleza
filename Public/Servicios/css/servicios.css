@@ -278,3 +278,76 @@ button {
     background:cornflowerblue;
 }
   
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Estilos para el contenedor de servicios */
+    .contenedor_servicios {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Botones en la sección de servicios */
+    .info-button {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* Ajustar el contenedor de las tarjetas */
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    /* Ajuste en las imágenes de las tarjetas */
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Estilo para el título principal */
+    .contenedor_titulo h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* Ajustes para el navbar */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ajuste del logo en el navbar */
+    .logo img {
+        width: 150px;
+    }
+
+    /* Cambio de disposición de los enlaces en el navbar */
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+
+    /* Modificaciones al modal para pantallas pequeñas */
+    #modal .modal-content {
+        width: 90%;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    /* Ajustar el texto en el modal */
+    #modal-title, #modal-description, #modal-hours, #modal-price, #modal-persons {
+        font-size: 14px;
+    }
+}
