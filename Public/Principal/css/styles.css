@@ -1,4 +1,7 @@
-
+*{
+    padding: 0;
+    margin: 0;
+}
 /* Estilos básicos para el contenedor de navegación */
 
 nav {
@@ -108,7 +111,9 @@ img {
 .contenedor {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
 }
 
 .fila {
@@ -124,8 +129,8 @@ img {
 }
 
 .fila p {
-    width: 50%;
     text-align: justify;
+    width: 400px;
 }
 
 .primer_parrafo {
@@ -133,15 +138,21 @@ img {
     text-align: justify;
 }
 
+h1{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
 .parrafo_dos {
-    font-family: Arial, sans-serif;
+   
     text-align: center;
     font-size: 36px;
     color: rgb(250, 152, 5);
 }
 
 .parrafo_tres {
-    font-family: Arial, sans-serif;
+
     text-align: center;
     font-size: 36px;
     color: rgb(227, 148, 21);
