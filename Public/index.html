@@ -4,20 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esqueleto Proyecto 2</title>
+    <title>Aplicativo ReservaNaturaleza</title>
     <link rel="stylesheet" href="Principal/css/styles.css">
 </head>
 
 <body>    
 
     <nav>
+        <div class="logo">
+            <!-- Suponiendo que el logo está en la carpeta public/images -->
+            <a href="/public/index.html"><img title="Holiwis! " src="/public/gaia.png" alt="Logo"></a>
+        </div>
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="servicios/servicios.html">Servicios</a></li>
-            <li><a href="Formulario/index.html">Form</a></li>
+            <!-- Rutas relativas a partir de la carpeta public -->
+            <li><a href="#">Nosotros</a></li> <!-- Ruta absoluta desde la raíz -->
+            <li><a href="/public/Servicios/servicios.html">Servicios</a></li> <!-- Ruta absoluta -->
+            <li><a href="/public/Formulario/index.html">Form</a></li> <!-- Ruta absoluta -->
         </ul>
     </nav>
+    
     
     <div class="carrusel">
         <div class="carrusel-inner">
@@ -78,7 +83,7 @@
     <p class="parrafo_tres">"Reserva ahora y embárcate en una aventura única!"</p>
     <br>
 
-    <div>
+    <!-- <div>
         <nav class="piedepagina">
             <ul>
                 <li><a href="#">Pasadía</a></li>
@@ -86,7 +91,7 @@
                 <li><a href="#">Picnic</a></li>
             </ul>
         </nav>
-    </div>
+    </div> -->
 
     <script src="Principal/js/carrusel.js"></script> 
 </body>

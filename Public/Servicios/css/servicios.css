@@ -1,60 +1,121 @@
 body {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
+    background-image: url("/Public/Servicios/images/fondo.png");
+    /* font-optical-sizing: auto; */
     font-style: normal;
     margin: 0;
     padding: 0;
     height: 100vh;
 }
 
+/* Estilos básicos para el contenedor de navegación */
 nav {
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center;
-    background-color: rgb(83, 75, 66);
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Espacio entre el logo y los enlaces */
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
+/* Estilos para el logo */
+nav .logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el logo */
+}
+
+nav .logo img {
+    height: 40px; /* Ajusta el tamaño del logo */
+    width: auto;
+}
+
+/* Estilos para la lista de navegación */
 nav ul {
-    list-style-type: none;
-    padding-left: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    gap: 80px;
+    justify-content: flex-end; /* Alinea los enlaces a la derecha */
+    gap: 1.5rem;
 }
 
-nav ul li {
-    margin-bottom: 5px;
-    font-size: 20px;
-}
-
+/* Estilos para los enlaces de navegación */
 nav ul li a {
+    color: #ffffff;
     text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 0.5rem;
 }
+
+/* Efecto de subrayado elegante en el enlace al pasar el cursor */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #4a90e2;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav ul li a:hover {
+    color: #4a90e2;
+}
+
+/* Adaptabilidad para dispositivos móviles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+
 
 h3 {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+
     text-align: center;
     font-size: x-large;
-    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    margin-bottom: 0;
+
 }
 
 .contenedor_titulo {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
+    position: static;
     font-style: normal;
-    font-size: 40px;
-    color: rgb(227, 148, 21);
+    font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
-    background-color: rgb(149, 132, 112);
+    margin-top: 150px;
+    margin-bottom: 50px;
+
 }
 
-.contenedor_titulo div:hover h1 {
-    transition: transform 0.3s ease;
-    transform: rotate(10deg);
-}
 
 .contenedor_titulo img {
     display: flex;
@@ -62,24 +123,24 @@ h3 {
 }
 
 .contenedor_servicios {
+
     font-family: "Poppins", sans-serif;
     font-size: 30px;
     font-weight: 100;
     font-style: normal;
-    color: rgb(227, 148, 21);
     justify-content: space-around;
     margin: 0px;
     padding: 0px;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(149, 132, 112);
 }
 
 
 .card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background-color: rgb(149, 132, 112);
+    margin-top: 50px;
+
 }
 
 .card-container ul {
@@ -88,6 +149,7 @@ h3 {
     list-style-type: none;
     /* Elimina las viñetas de la lista */
     padding: 0;
+    bottom: 0;
 }
 
 i {
@@ -96,9 +158,17 @@ i {
     display: flex;
 }
 
+.card-container p{
+    display: -webkit-box;
+    -webkit-line-clamp: 6;  /* Número de líneas a mostrar */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;  /* Opcional: muestra '...' al final si el texto está truncado */
+}
+
 .card-container div {
     background-color: rgba(243, 233, 221, 0.774);
-    margin: 20px;
+    margin: 10px;
     padding: 10px;
     border-radius: 5px;
     transition: .4s ease;
@@ -109,12 +179,11 @@ i {
 }
 
 .card-container div:hover h3 {
-    color: rgb(149, 132, 112);
     transition: .2s all;
 }
 
 .card-container div:hover {
-    transform: translateY(-10px);
+    transform: translateY(-2px);
     cursor: pointer;
 }
 
@@ -139,11 +208,10 @@ i {
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
-    color: rgb(0, 0, 0);
     text-align: justify;
     padding: 20px;
     margin-bottom: 5px;
-    font-size: 20px;
+    
     line-height: 1.2;
 }
 

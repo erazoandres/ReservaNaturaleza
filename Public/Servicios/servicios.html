@@ -22,16 +22,22 @@
 <body>
     <!--Esta linea contiene navbar -->
     <nav>
+        <div class="logo">
+            <!-- Suponiendo que el logo está en la carpeta public/images -->
+            <a href="/public/index.html"><img title="Holiwis! " src="/public/gaia.png" alt="Logo"></a>
+        </div>
         <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="../Formulario/index.html">Form</a></li>
+            <!-- Rutas relativas a partir de la carpeta public -->
+            <li><a href="#">Nosotros</a></li> <!-- Ruta absoluta desde la raíz -->
+            <li><a href="/public/Servicios/servicios.html">Servicios</a></li> <!-- Ruta absoluta -->
+            <li><a href="/public/Formulario/index.html">Form</a></li> <!-- Ruta absoluta -->
         </ul>
     </nav>
+    
+    
     <!--Esta linea contiene el titulo -->
     <div class="contenedor_titulo">
-        <h1>Experiencias que dejan huella verde</h1>
+        <h1>Experiencias que dejan huella <span style="color: yellowgreen;">verde</span></h1>
     </div>
     <!--Esta linea contiene el contenedor de servicios -->
     <div class="contenedor_servicios">
