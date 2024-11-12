@@ -13,6 +13,11 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 
+// Ruta por defecto
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
+
 // Conectar con MongoDB (usando la URI de conexión)
 mongoose.connect('mongodb://localhost:27017/miBaseDeDatos', {
   useNewUrlParser: true,
