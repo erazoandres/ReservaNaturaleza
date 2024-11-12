@@ -234,6 +234,7 @@ button {
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
     padding-top: 60px;
+    transition: fadeIn 0.5s;
   }
   
   .modal-content {
@@ -349,5 +350,22 @@ button {
     /* Ajustar el texto en el modal */
     #modal-title, #modal-description, #modal-hours, #modal-price, #modal-persons {
         font-size: 14px;
+    }
+}
+
+
+/* Animación de entrada */
+.contenedor_formulario {
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

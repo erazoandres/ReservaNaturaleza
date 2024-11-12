@@ -10,7 +10,7 @@ body {
     box-sizing: border-box;
     min-height: 100vh;
     margin: 0;
-
+}
 
 /* Estilos básicos para el contenedor de navegación */
 nav {
@@ -163,7 +163,6 @@ textarea {
     resize: vertical;
     min-height: 80px;
 }
-
 /* Animación de entrada */
 .contenedor_formulario {
     animation: fadeIn 0.6s ease-out;
